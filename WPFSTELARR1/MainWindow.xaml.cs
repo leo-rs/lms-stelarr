@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPFSTELARR1.Classes;
 
-
+//Leo Ras
 namespace WPFSTELARR1
 {
     /// <summary>
