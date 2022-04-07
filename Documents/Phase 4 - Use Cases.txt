@@ -1,0 +1,265 @@
+Use case 1: Create a user account
+
+Primary Actors: Learner, Instructor, Guardian
+
+Use Case Overview: A user wants to use the STELARR application. A user will create an account using their full name, date of birth, and e-mail address. The user will choose a username and password for their login credentials. The user will select their user type: Learner, Instructor, or Guardian. Upon successful completion, the user will be able to access the STELARR program.
+
+Trigger: The user opens the STELARR application and clicks “Create New Account” on the main window.
+
+Precondition: The user does not have an existing account.
+
+Precondition 2: The user has been approved to create an account by an administrator.
+
+Basic Flow:
+The user clicks “Create New Account.”
+The user fills in their name, date of birth, e-mail and selects their role.
+The user enters a username that is 5-10 characters in length.
+The user enters a password that is 8-12 characters in length.
+The user enters a token from administrator.
+The user clicks “Submit.”
+
+Termination outcome:
+The user can now access the contents of STELARR.
+
+Alternative Flow 1: 
+If the user chooses a username that is already in use, the account will not be created. The user will remain on the Create Account page until the activity is canceled or the program is terminated.
+
+Alternative Flow 2:
+If the user does not have a valid e-mail address. An override will be provided for a maximum of 2 accounts.
+
+
+
+Use case 2: Log on to the STELARR application
+
+Primary Actors: Learner, Instructor, Guardian
+
+Use Case Overview: A user has launched the STELARR application and want to access its contents. The user enters their username and password and clicks “Login.” The user is verified and can now access STELARR contents.
+
+Trigger: The user clicks “Login.”
+
+Precondition: The user enters a correct username.
+
+Precondition 2: The user enters a correct password.
+
+Basic Flow:
+The user launches the STELARR application.
+The user enters their username and password.
+The user clicks “Login.”
+
+Termination outcome:
+The user can now access the contents of STELARR.
+
+Alternative Flow 1: 
+The user enters incorrect credentials and clicks “Login.” An error message displays and the user will be able to re-enter their login credentials. After ten, successive, unsuccessful attempts, the program terminates.
+
+
+
+Use case 3: Begin Lesson
+
+Primary Actors: Learner, Instructor
+
+Use Case Overview: A user that has access to the STELARR application wants to learn a lesson. The user will first select the “Content” menu. The user then selects a subject, one of its respective modules, and click “Begin Lesson.” The user is then able to view the contents of the lesson and can navigate its pages. User progress is saved, and the user can choose a different module at any time. 
+
+Trigger: The user clicks “Begin Lesson.”
+
+Precondition: The user is logged into the STELARR program.
+
+Precondition 2: The user can view the “Subjects” list.
+
+Basic Flow:
+The user selects the subject they want to learn or teach.
+The user selects the module they want to begin.
+The user clicks “Begin Lesson”
+The user freely navigates the lesson’s pages.
+
+Termination outcome:
+The user has viewed the contents of a lesson.
+
+Alternative Flow 1: 
+If the user chooses a username that is already in use, the account will not be created. The user will remain on the Create Account page until the activity is canceled or the program is terminated.
+
+Alternative Flow 2:
+If the user does not have a valid e-mail address. An override will be provided for a maximum of 2 accounts.
+
+
+
+Use case 4: Take an assessment
+
+Primary Actors: Learner, Instructor
+
+Use Case Overview: A user wants to take an assessment quiz on previously viewed lessons. The user will select the “Assessments” menu. The user will be able to select an assessment quiz to take based on their completed modules. The user selects the assessment quiz and then clicks “Take Quiz.” The user selects answers based on given questions within a time limit. The user can choose to pause the activity. Pausing time will block the contents of the screen until unpaused or a certain amount of paused time has elapsed. The user clicks “Submit” to submit answers and assessment activity. Upon completion of the assessment, a grade and feedback will be posted in the screen. 
+
+Trigger: The user clicks “Begin Assessment.” 
+
+Precondition: The user has previously completed a lesson.
+
+Basic Flow:
+The user selects the “Assessment” menu.
+The user selects an assessment quiz and clicks “Take Quiz.”
+The user answers test questions and clicks “Submit.”
+The user is presented the results and feedback of their assessment.
+
+Termination outcome:
+The user can see how well they understood a lesson.
+
+Alternative Flow 1: 
+If the user does not have any assessment options to take. They will be reminded to complete a lesson.
+
+Alternative Flow 2:
+If the user runs out of time. The quiz will submit automatically.
+
+Alternative Flow 3:
+If the user runs out of pause time. The assessment will resume until assessment time is exhausted. At which point, the quiz will submit automatically.
+
+
+
+Use case 5: Create new lesson or assessment
+
+Primary Actors: Instructor
+
+Use Case Overview: An instructor wants to add a custom lesson to the program. The instructor will be able to upload a file that is then converted into a lesson. Upload instructions will be displayed on the main window. Upon successful upload, the instructor will be able to view these lessons under the “Additional Content” menu. The same process applies when creating a new assessment.
+
+Trigger: The user selects option to “Add Custom Lesson or Assessment” to “Additional Content” menu.
+
+Precondition: The user is an instructor.
+
+Basic Flow:
+The user navigates to “Additional Content” menu and selects “Add Custom Lesson or Assessment.”
+The user uploads a text file that is within size limit.
+The user can preview the added lesson.
+The user completes activity by clicking “Finish.”
+
+Termination outcome:
+The instructor has added additional lessons to augment learning.
+
+Alternative Flow 1: 
+If the user’s file is over the size limit, an error message will display and the file will not be uploaded. The user can then re-upload their file.
+
+Alternative Flow 2:
+If the user selected the wrong file, the user could cancel the activity. They will then be able to reupload their file.
+
+
+
+Use case 6: Edit Lesson or assessment
+
+Primary Actors: Instructor
+
+Use Case Overview: An instructor wants to edit a custom lesson or assessment that was previously created. The instructor can review this content and update its contents. After editing, the instructor will be able to view these lessons under the “Additional Content” menu. The same process applies when editing an assessment.
+
+Trigger: The user selects option to “Edit Custom Lesson or Assessment” in “Additional Content” menu.
+
+Precondition 1: The user is an instructor.
+
+Precondition 2: The user has previously uploaded a lesson or assessment.
+
+Basic Flow:
+The user navigates to the appropriate menu and selects the lesson or assessment.
+The user clicks “Edit.” 
+The user can preview the edited lesson or assessment.
+The user completes activity by clicking “Save.”
+
+Termination outcome:
+The instructor has improved the content of a lesson or assessment.
+
+Alternative Flow 1: 
+If the user’s file has reached a certain amount of characters, the option to “Save” will be unavailable.
+
+Alternative Flow 2:
+If the user wants to revert any changes, the user could cancel the activity and the content will be unaffected.
+
+
+
+Use case 7: Print lesson
+
+Primary Actors: Learner, Instructor, Guardian
+
+Use Case Overview: A user wants to print a lesson or assessment for a student to be able to take home. The user views the lesson they want to print and they click “Print Lesson.”
+
+Trigger: The user selects option to “Print Lesson” when viewing a lesson.
+
+Precondition 1: The user is currently displaying a lesson.
+
+Precondition 2: The user is connected to a printer.
+
+Basic Flow:
+The user begins a lesson.
+The user navigates to the desired page.
+The user clicks “Print Lesson” button.
+
+Termination outcome:
+The user has successfully printed the lesson.
+
+Alternative Flow 1: 
+If the user is not connected to a printer, the user will not be able to print the page.
+
+Alternative Flow 2:
+If the user is not connected to a printer, they can print the lesson into a .pdf and save it to their desktop.
+
+
+
+Use case 8: View progress
+
+Primary Actors: Learner
+
+Use Case Overview: A learner can review their progress as they complete lessons and assessments. The learner will be able to view the content that they have completed and content that are due to be completed. The lessons and assessments are arranged in an order that is increasing in complexity. The learner will be assigned a mastery grade for every completed module.
+
+Trigger: The user opens their profile and selects “View Progress”
+
+Precondition: The user is a learner.
+
+Precondition 2: The user has completed at least one lesson.
+
+Basic Flow:
+The user clicks their profile icon.
+The user selects “View Progress.”
+
+Termination outcome:
+The learner can determine their mastery level and decide if they want to restart a lesson to achieve their desired grade.
+
+Alternative Flow 1: 
+If the user does not have any completed modules. A note will be displayed saying as such.
+
+
+
+Use case 9: Access tutorial mode 
+
+Primary Actors: Instructor, Learner, Guardian
+
+Use Case Overview: A user wants to practice navigating menus and selecting options without affecting their progress. The user will utilize the tutorial mode that will engage them in interacting with the program, as well as provide an overview of the menus.
+
+Trigger: The user selects “Tutorial Menu” and clicks “Launch Tutorial Mode”
+
+Precondition: The user can log on to the STELARR application.
+
+Basic Flow:
+The user navigates to “Tutorial Menu” and clicks “Launch Tutorial Mode”
+The user navigates STELARR menus without consequence to their progress.
+The user exits tutorial mode.
+
+Termination outcome:
+The user gains confidence in navigating the STELARR application.
+
+Alternative Flow 1: 
+If the user does not want to be in Tutorial Mode, they can exit the activity by clicking “End Tutorial Mode.”
+
+
+
+Use case 10: Access gradebook 
+
+Primary Actors: Instructor
+
+Use Case Overview: An instructor wants to view the grades of learners that are assigned to their classroom. The instructor selects the “Gradebook” menu and it will display the names, grade levels, grades, and completion rate of each student. An option to sort learners by name, grade, completion rate, etc. will be available. 
+
+Trigger: The user selects “Gradebook” menu option.
+
+Precondition 1: The user is an instructor.
+
+Precondition 2: The user has an assigned student and the student has completed an assessment.
+
+Basic Flow:
+The user navigates to “Gradebook.”
+
+Termination outcome:
+The instructor can determine how their classroom is faring under the STELARR application and can tailor learning to accommodate their students.
+
+

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPFSTELARR1.Classes
+namespace WPFSTELARR1
 {
     public class Folder
     {

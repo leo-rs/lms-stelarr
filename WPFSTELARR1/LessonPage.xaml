@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Margin="20" Name="TopText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Lesson 1" FontSize="18" />
-        <TextBlock Grid.Row="1" Margin="20" Name="BottomText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Examples" FontSize="18"/>
+        <TextBlock Margin="20" Name="TopText" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Choose a Module from the combo box above." FontSize="18" />
+        <TextBlock Grid.Row="1" Margin="20" Name="BottomText" HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="18"/>
     </Grid>
 </Page>

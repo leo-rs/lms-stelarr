@@ -18,9 +18,9 @@ namespace WPFSTELARR1
     /// <summary>
     /// Interaction logic for Assessment.xaml
     /// </summary>
-    public partial class Assessment : Page
+    public partial class AssessmentPage : Page
     {
-        public Assessment()
+        public AssessmentPage()
         {
             InitializeComponent();
         }
