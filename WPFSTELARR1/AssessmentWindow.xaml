@@ -1,0 +1,81 @@
+﻿<Window x:Class="WPFSTELARR1.AssessmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFSTELARR1"
+        mc:Ignorable="d"
+        Title="AssessmentWindow" Height="600" Width="700" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="SlateGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Margin="10,0,0,0" VerticalAlignment="Center">
+                <TextBlock Text="SUBJECT #" FontWeight="Bold" FontSize="18"/>
+                <TextBlock Text="MODULE #" FontWeight="Bold" FontSize="14"/>
+                <TextBlock Text="QUIZ #" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Label Content="Time remaining:" VerticalContentAlignment="Center" Margin="100,0,0,0" FontWeight="Bold"/>
+                <TextBlock Text="HH:MM:SS" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Button Content="Pause" VerticalAlignment="Center" Margin="10,0,10,0" Background="Salmon" Width="50" FontWeight="Bold"></Button>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Name="Q1" Text="Question 1" Grid.Row="0" FontWeight="Bold" Margin="10"/>
+            <TextBlock Name="Q2" Text="Question 2" Grid.Row="2" FontWeight="Bold" Margin="10"/>
+            <TextBlock Name="Q3" Text="Question 3" Grid.Row="4" FontWeight="Bold" Margin="10"/>
+            <TextBlock Name="Q4" Text="Question 4" Grid.Row="6" FontWeight="Bold" Margin="10"/>
+            <TextBlock Name="Q5" Text="Question 5" Grid.Row="8" FontWeight="Bold" Margin="10"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <RadioButton Content="Answer 1" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 2" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 3" Margin="10,0,50,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <RadioButton Content="Answer 1" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 2" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 3" Margin="10,0,50,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="5" Orientation="Horizontal">
+                <RadioButton Content="Answer 1" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 2" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 3" Margin="10,0,50,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="7" Orientation="Horizontal">
+                <RadioButton Content="Answer 1" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 2" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 3" Margin="10,0,50,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="9" Orientation="Horizontal">
+                <RadioButton Content="Answer 1" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 2" Margin="10,0,50,0"/>
+                <RadioButton Content="Answer 3" Margin="10,0,50,0"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Background="AntiqueWhite">
+            <TextBlock Text="x/n questions answered" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="DarkGray"/>
+            <Button Content="Reset Answers" Height="20" Width="100" Margin="10,0,0,0" FontWeight="Bold"/>
+            <Button Content="Submit" Height ="20" Width="50" Margin="10,0,0,0" FontWeight="Bold" Background="LightGreen"/>
+        </StackPanel>
+    </Grid>
+</Window>

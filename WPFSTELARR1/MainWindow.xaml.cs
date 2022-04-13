@@ -29,10 +29,15 @@ namespace WPFSTELARR1
         Folder curr;
         int n = 0;
 
+        AssessmentWindow aw = new AssessmentWindow();
+        LessonWindow lw = new LessonWindow();
+
 
         public MainWindow()
         {
             InitializeComponent();
+            aw.Show();
+            lw.Show();
 
             PageData page1m = new PageData(1, "Addition", "1 + 1 = 2 \n1 + 2 = 3 \n2 + 2 = 4");
             PageData page2m = new PageData(2, "Subtraction", "2 - 1 = 1 \n5 - 2 = 3 \n8 - 4 = 4");
