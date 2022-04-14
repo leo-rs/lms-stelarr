@@ -22,7 +22,6 @@ namespace WPFSTELARR1
     /// </summary>
     public partial class MainWindow : Window
     {
-        LessonWindow lw = new LessonWindow();
 
         public MainWindow()
         {
@@ -32,18 +31,25 @@ namespace WPFSTELARR1
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            MessageBox.Show("See ya!");
+            MessageBox.Show("See you later!");
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
-            string msg = "Do you want to close without saving?";
-            MessageBoxResult result = MessageBox.Show(msg, "STELARR", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            string msg = "Do you want to exit STELARR?";
+            MessageBoxResult result = MessageBox.Show(msg, "Exit", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.No)
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnMath_Click(object sender, RoutedEventArgs e)
+        {
+
+            LessonWindow lw = new LessonWindow();
+            lw.Show();
         }
     }
 }

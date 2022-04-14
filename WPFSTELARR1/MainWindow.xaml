@@ -8,7 +8,7 @@
         Title="STELARR" Height="600" Width="850"
         Closed="Window_Closed"
         Closing="Window_Closing" ResizeMode="NoResize">
-    <Grid>
+    <Grid Background="AntiqueWhite">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
@@ -20,10 +20,14 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="0">
                 <Label Name="lblWelcome" Margin="10,25,10,0" Content="Welcome, Learner!" FontWeight="Bold" HorizontalContentAlignment="Center"/>
                 <Rectangle Margin="0,0,0,0" Width="65" Height="65"  Stroke="Black" StrokeThickness="1" Panel.ZIndex="5" Fill="White"></Rectangle>
                 <Label Name="lblGrade" Content="Grade 2" HorizontalAlignment="Center" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Bottom">
+                <Label Content="Your current GPA is" Margin="10,30,10,0" FontWeight="Bold" />
+                <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" Text="A+" VerticalAlignment="Bottom" FontSize="50" FontStyle="Italic" Foreground="#FF02803E" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.RowSpan="2" Margin="10,100,10,10">
                 <Button Content="Gradebook" FontWeight="Bold"></Button>
@@ -31,6 +35,24 @@
                 <Button Content="Settings" Margin="0,0,0,5" FontWeight="Bold"></Button>
                 <Button Content="Help" FontWeight="Bold"></Button>
             </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBlock HorizontalAlignment="Center"  Text="My Library" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="36" FontWeight="Bold" FontStyle="Italic" Grid.Row="1"/>
+            <Button Name="btnMath" Content="Numbers and Math!" HorizontalAlignment="Left" Margin="175,0,0,0" Grid.Row="2" VerticalAlignment="Top" Height="65" Width="144" Click="btnMath_Click"/>
+            <Button Content="Colors and Shapes!" HorizontalAlignment="Left" Margin="175,129,0,0" Grid.Row="2" VerticalAlignment="Top" Height="65" Width="144" Grid.RowSpan="2"/>
+            <Button Content="Words and Letters!" HorizontalAlignment="Left" Margin="31,0,0,0" Grid.Row="2" VerticalAlignment="Top" Height="65" Width="144" Grid.Column="1"/>
+            <Button Content="Tutorial Mode!" HorizontalAlignment="Left" Margin="31,129,0,0" Grid.Row="2" VerticalAlignment="Top" Height="65" Width="144" Grid.RowSpan="2" Grid.Column="1"/>
         </Grid>
     </Grid>
 </Window>
