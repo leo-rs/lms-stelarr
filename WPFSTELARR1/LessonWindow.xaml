@@ -27,12 +27,19 @@
                 <Button Content="Print" VerticalAlignment="Center" Margin="10,0,10,0" Width="70" FontWeight="Bold"></Button>
             </StackPanel>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Name="txtContent" Text="Lesson content displayed here." Margin="20"/>
+            <Image Height="300" Grid.Column="1" Width="200">
+            </Image>
+        </Grid>
         <StackPanel Grid.Row="2" Background="AntiqueWhite" Orientation="Horizontal">
-            <Button Content="&lt;&lt; Previous Page" Height="20" Width="120" Margin="10,0,10,0" FontWeight="Bold"/>
-            <Label Content="X/N" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkGray" FontStyle="Italic"/>
-            <Button Content="Next Page >>" Height="20" Width="120" Margin="10,0,0,0" FontWeight="Bold"/>
+            <Button Name="btnPre" Content="&lt;&lt; Previous Page" Height="20" Width="120" Margin="10,0,10,0" FontWeight="Bold" Click="btnPre_Click"/>
+            <Label Name="lblPage" Content="X/N" VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkGray" FontStyle="Italic"/>
+            <Button Name="btnNex" Content="Next Page >>" Height="20" Width="120" Margin="10,0,0,0" FontWeight="Bold" Click="btnNex_Click"/>
         </StackPanel>
-        <Image HorizontalAlignment="Left" Height="340" Margin="400,50,0,0" Grid.Row="1" VerticalAlignment="Top" Width="250">
-        </Image>
     </Grid>
 </Window>
