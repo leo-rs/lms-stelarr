@@ -76,5 +76,21 @@ namespace WPFSTELARR1
                 MessageBox.Show("You have reached the end of this lesson.");
             }
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+            string msg = "Do you want to exit this lesson?";
+            MessageBoxResult result = MessageBox.Show(msg, "Exit", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (result == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            MessageBox.Show("See you later!");
+        }
     }
 }

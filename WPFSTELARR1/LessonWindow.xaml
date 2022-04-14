@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFSTELARR1"
         mc:Ignorable="d"
-        Title="LessonView" Height="600" Width="700">
+        Title="LessonView" Height="600" Width="700" ResizeMode="NoResize"
+        Closed="Window_Closed"
+        Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
