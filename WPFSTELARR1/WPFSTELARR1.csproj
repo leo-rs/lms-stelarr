@@ -8,4 +8,8 @@
     <StartupObject>WPFSTELARR1.App</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
 </Project>
