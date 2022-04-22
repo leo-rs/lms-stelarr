@@ -14,19 +14,27 @@ namespace STELARR2.ViewModels
     public class ShellViewModel : Conductor<object>
     {
         private Session _session;
+
         private DateTime d;
         private string _clock;
-        DispatcherTimer timer = new DispatcherTimer();
+        private DispatcherTimer timer = new DispatcherTimer();
+
+        private readonly DashboardViewModel dash;
+        private readonly LibraryViewModel lib;
+
 
         public ShellViewModel()
         {
-            _session = new Session(new User("Leo", "Ras"));
+            _session = new Session(new Learner("Leo", "Ras"));
 
             timer.Tick += DashTimer;
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Start();
 
-            ActiveItem = new DashboardViewModel(_session.User);
+            dash = new DashboardViewModel(_session.Learner);
+            lib = new LibraryViewModel(_session.Learner);
+
+            ActiveItem = dash;
         }
 
         public Session Session
@@ -46,5 +54,14 @@ namespace STELARR2.ViewModels
             get { return _clock; }
         }
 
+        public void LoadLibrary()
+        {
+            ActivateItemAsync(lib);
+        }
+
+        public void LoadHome()
+        {
+            ActivateItemAsync(dash);
+        }
     }
 }

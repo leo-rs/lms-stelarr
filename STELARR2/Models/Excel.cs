@@ -30,39 +30,12 @@ namespace STELARR2.Models
                 return ws.Cells[i, j].Value2;
             else
                 return "";
+
         }
 
         public void CloseWorkbook()
         {
             wb.Close(false);
         }
-
-        //private string _lessonContent;
-        //int _currCol = 0;
-        //int _currRow = 0;
-        //Excel xl;
-
-        //public ShellViewModel()
-        //{
-        //    xl = new Excel(@"C:\Users\janle\source\repos\lms-stelarr\STELARR2\Files\lessons.xlsx", 1);
-        //}
-
-        //public string LessonContent
-        //{
-        //    get { return _lessonContent; }
-        //}
-
-        //public void LoadLesson()
-        //{
-        //    _lessonContent = xl.ReadCell(_currRow, _currCol);
-        //    NotifyOfPropertyChange(() => LessonContent);
-        //    _currRow++;
-        //}
-
-        //public void ExitLesson()
-        //{
-        //    xl.CloseWorkbook();
-        //    MessageBox.Show("Exiting lesson.");
-        //}
     }
 }

@@ -12,17 +12,20 @@
             <RowDefinition Height="9*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
         <!-- Row 1 -->
         <StackPanel Orientation="Horizontal" Background="LightSlateGray">
-            <Button Margin="0,0,10,0" Width="80" FontWeight="Bold">
+            <Button x:Name="LoadHome" Margin="0,0,10,0" Width="80" FontWeight="Bold">
                 Home
             </Button>
-            <Button Margin="0,0,10,0" Width="80" FontWeight="Bold">
+            <Button x:Name="LoadLibrary" Margin="0,0,10,0" Width="80" FontWeight="Bold">
                 Library
+            </Button>
+            <Button Margin="0,0,10,0" Width="80" FontWeight="Bold">
+                Quizzes
             </Button>
             <Button Margin="0,0,10,0" Width="80" FontWeight="Bold">
                 Gradebook
@@ -31,10 +34,10 @@
                 Settings
             </Button>
         </StackPanel>
-        <Label Grid.Column="1" Content="{Binding Path=Clock}" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Foreground="White" MinWidth="200" MinHeight="30" FontSize="18" HorizontalContentAlignment="Right"/>
+        <Label Grid.Column="1" Content="{Binding Path=Clock}" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Foreground="White" MinWidth="200" MinHeight="30" FontSize="20" HorizontalContentAlignment="Right"/>
 
         <!-- Row 2 -->
-        <ContentControl Grid.Row="1" Grid.ColumnSpan="2" Margin="5" x:Name="ActiveItem">
+        <ContentControl Grid.Row="1" Grid.ColumnSpan="2" x:Name="ActiveItem">
             New Content Control here
         </ContentControl>
     </Grid>

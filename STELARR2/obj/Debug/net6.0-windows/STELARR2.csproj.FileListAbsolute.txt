@@ -84,3 +84,5 @@ C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\
 C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\SettingsView.baml
 C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\LibraryView.g.cs
 C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\LibraryView.baml
+C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\LibraryListView.g.cs
+C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\Views\LibraryListView.baml

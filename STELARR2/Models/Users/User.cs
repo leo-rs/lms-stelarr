@@ -15,6 +15,7 @@ namespace STELARR2.Models.Users
         private string _username;
         private string _email;
 
+
         public User(string firstname, string lastname)
         {
             _firstName = firstname;

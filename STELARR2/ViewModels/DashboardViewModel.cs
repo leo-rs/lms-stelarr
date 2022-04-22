@@ -16,6 +16,11 @@ namespace STELARR2.ViewModels
             _user = user;
         }
 
+        public DashboardViewModel(Learner learner)
+        {
+            _user = learner;
+        }
+
         public string FullName
         {
             get { return _user.FirstName + " " + _user.LastName + "!"; }

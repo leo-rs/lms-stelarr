@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E6+frzX1TgiNDpFivcs4h5PcTzcn+XtGtgY9V5r3bw2nxJM7eJQBWU49jGGcIfLrMGaZCM08u05cBBwW+jsRng==",
+  "dgSpecHash": "16FJvIMw7rdUnFO1aBmVDafzEm25zmuAsxMsKE8rznI9VK0KMLoBA08N97Za70lQauEiS03xreBcTXhmz6yybQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\janle\\Source\\Repos\\lms-stelarr\\STELARR2\\STELARR2.csproj",
+  "projectFilePath": "C:\\Users\\janle\\source\\repos\\lms-stelarr\\STELARR2\\STELARR2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\janle\\.nuget\\packages\\caliburn.micro\\4.0.173\\caliburn.micro.4.0.173.nupkg.sha512",
     "C:\\Users\\janle\\.nuget\\packages\\caliburn.micro.core\\4.0.173\\caliburn.micro.core.4.0.173.nupkg.sha512",

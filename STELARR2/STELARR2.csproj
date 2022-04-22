@@ -21,10 +21,8 @@
 
   <ItemGroup>
     <Folder Include="Files\" />
-    <Folder Include="Models\Data\" />
     <Folder Include="Models\Content\" />
     <Folder Include="Models\Portfolio\Assessments\" />
-    <Folder Include="Models\Portfolio\Lessons\" />
   </ItemGroup>
 
   <ItemGroup>
