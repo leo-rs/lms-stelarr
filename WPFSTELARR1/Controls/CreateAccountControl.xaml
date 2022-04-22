@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="WPFSTELARR1.Controls.CreateAccountControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFSTELARR1.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="850">
+    <Grid>
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Background="#FF9EBD8D" Grid.ColumnSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0">
+                        <Label Name="lblWelcome" Content="Welcome to STELARR!" FontWeight="Bold" HorizontalContentAlignment="Left" Margin="50 30 0 0"/>
+                        <Rectangle Width="65" Height="65"  Stroke="Black" StrokeThickness="1" Panel.ZIndex="5" Fill="White" HorizontalAlignment="Left" Margin="80 0 0 0"></Rectangle>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.RowSpan="2" Margin="0 30 0 0">
+                        <TextBlock Name="firstNameDisplay" FontWeight="Bold" HorizontalAlignment="Center">First Name:</TextBlock>
+                        <TextBox x:Name="firstNameCreate" Width="150" Margin="0 0 0 0" BorderThickness="1" BorderBrush="Black" SelectionBrush="Black" SelectionTextBrush="Black"/>
+                        <TextBlock Name="lastNameDisplay" FontWeight="Bold" HorizontalAlignment="Center">Last Name:</TextBlock>
+                        <TextBox x:Name="lastNameCreate" Width="150" Margin="0 0 0 0" BorderThickness="1" BorderBrush="Black" SelectionBrush="Black" SelectionTextBrush="Black"/>
+                        <TextBlock Name="roleDisplay" FontWeight="Bold" HorizontalAlignment="Center">User, Parent, or Teacher</TextBlock>
+                        <TextBox x:Name="roleCreate" Width="150" Margin="0 0 0 0" BorderThickness="1" BorderBrush="Black" SelectionBrush="Black" SelectionTextBrush="Black"/>
+                        <TextBlock Name="usernameDisplay" FontWeight="Bold" HorizontalAlignment="Center">Username:</TextBlock>
+                        <TextBox x:Name="usernameCreate" Width="150" Margin="0 0 0 0" BorderThickness="1" BorderBrush="Black" SelectionBrush="Black" SelectionTextBrush="Black"/>
+                        <TextBlock Name="passwordDisplay" FontWeight="Bold" HorizontalAlignment="Center">Password:</TextBlock>
+                        <TextBox x:Name="passwordCreate" Width="150" Margin="0 0 0 0" BorderThickness="1" BorderBrush="Black" SelectionBrush="Black" SelectionTextBrush="Black"/>
+                        <Button x:Name ="createAccButton" Content="Create Account" FontWeight="Bold" Width="150" Margin="0 10 0 0" Click="createAccButton_Click"></Button>
+                        <Button x:Name="cancelCrAccButton" Content="Cancel" Margin="0 10 0 0" FontWeight="Bold" Width="150" Click="cancelCrAccButton_Click"></Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <ContentControl x:Name="content"></ContentControl>
+    </Grid>
+</UserControl>
