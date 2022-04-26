@@ -21,11 +21,11 @@
             </Grid.ColumnDefinitions>
 
             <!-- Row 1 -->
-            <StackPanel x:Name="MenuBarIsVisible" Orientation="Horizontal">
-                <Button x:Name="LoadHome" Margin="0,0,10,0" Width="80" FontWeight="Bold">
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="LoadHomeBtn" Margin="0,0,10,0" Width="80" FontWeight="Bold" Click="LoadHomeBtn_Click">
                     Home
                 </Button>
-                <Button x:Name="LoadLibrary" Margin="0,0,10,0" Width="80" FontWeight="Bold">
+                <Button x:Name="LoadLibraryBtn" Margin="0,0,10,0" Width="80" FontWeight="Bold" Click="LoadLibraryBtn_Click">
                     Library
                 </Button>
                 <Button Margin="0,0,10,0" Width="80" FontWeight="Bold">
@@ -42,7 +42,7 @@
 
             <!-- Row 2 -->
             <ContentControl Grid.Row="1" Grid.ColumnSpan="2" x:Name="activeView">
-                New Content Control here
+                Choose from options above
             </ContentControl>
         </Grid>
         <ContentControl x:Name="screen">

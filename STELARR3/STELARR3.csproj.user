@@ -10,7 +10,7 @@
     <Compile Update="UserControls\DashControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\LessonControl.xaml.cs">
+    <Compile Update="UserControls\LibraryControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\LoginControl.xaml.cs">
@@ -24,7 +24,7 @@
     <Page Update="UserControls\DashControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserControls\LessonControl.xaml">
+    <Page Update="UserControls\LibraryControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\LoginControl.xaml">

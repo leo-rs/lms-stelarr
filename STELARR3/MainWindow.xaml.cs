@@ -18,20 +18,26 @@ using System.Windows.Threading;
 
 namespace STELARR3
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
-        private User _current;
+        private Session _session;
+
+        private LoginControl login;
+        private UserControl dash;
+        private UserControl library;
+
+        private bool _active = false;
 
         public MainWindow()
         {
             InitializeComponent();
-            screen.Content = new LoginControl();
-            activeView.Content = new DashControl();
+            login = new LoginControl();
+            dash = new DashControl();
+
+            screen.Content = login;
 
         }
+
 
         private void Window_Closed(object sender, EventArgs e)
         {
@@ -46,6 +52,18 @@ namespace STELARR3
             {
                 e.Cancel = true;
             }
+        }
+
+        private void LoadHomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            activeView.Content = dash;
+        }
+
+        private void LoadLibraryBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            library = new LibraryControl(login.Sesh().Learner);
+            activeView.Content = library;
         }
     }
 }

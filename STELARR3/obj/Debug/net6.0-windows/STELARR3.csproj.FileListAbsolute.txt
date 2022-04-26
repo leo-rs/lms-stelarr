@@ -24,6 +24,6 @@ C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserCo
 C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
 C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\STELARR3.csproj.ResolveComReference.cache
 C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\DashControl.g.cs
-C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\LessonControl.g.cs
 C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\DashControl.baml
-C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\LessonControl.baml
+C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\LibraryControl.g.cs
+C:\Users\janle\source\repos\lms-stelarr\STELARR3\obj\Debug\net6.0-windows\UserControls\LibraryControl.baml

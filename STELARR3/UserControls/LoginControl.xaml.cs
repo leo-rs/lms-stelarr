@@ -1,4 +1,4 @@
-﻿using STELARR3.Classes.Excel;
+﻿using STELARR3.Classes.Data;
 using STELARR3.Classes.Users;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,13 +13,24 @@ namespace STELARR3.UserControls
     {
         private string _username;
         private string _password;
+        private string name = "Leo";
+        private string last = "Ras";
         private bool _loggedIn;
+        private Session _sesh;
+
         private Excel xl;
 
         public LoginControl()
         {
             InitializeComponent();
+
         }
+
+        public Session Sesh()
+        {
+            return _sesh;
+        }
+
 
         public string Username()
         {
@@ -51,11 +62,17 @@ namespace STELARR3.UserControls
 
             if (_loggedIn)
             {
+                _sesh = new Session(new Learner(name, last));
                 LoginWarning.Visibility = Visibility.Hidden;
                 this.Visibility = Visibility.Hidden;
             }
             else
                 LoginWarning.Visibility = Visibility.Visible;
+        }
+
+        public bool LoginSuccess()
+        {
+            return _loggedIn;
         }
 
         public bool Authenticate(string username, string password)
@@ -68,8 +85,8 @@ namespace STELARR3.UserControls
             else
             {
                 xl = new Excel(@"C:\Users\janle\source\repos\lms-stelarr\STELARR3\Resources\Files\users.xlsx", 1);
-                int i = 1;
-                int j = 1;
+                int i = 0;
+                int j = 0;
 
                 while (i <= 5)
                 {
@@ -100,32 +117,33 @@ namespace STELARR3.UserControls
 
         private void CreateAccountBtn_Click(object sender, RoutedEventArgs e)
         {
-            LoginWarning.Visibility = Visibility.Hidden;
-            LoginWarning.Text = "Create Account Failed";
-            LoginWarning.Background = new SolidColorBrush(Colors.Red);
-            LoginWarning.Foreground = new SolidColorBrush(Colors.Black);
 
-            if (UserTxt.Text != null && PassTxt.Text != null)
+            bool success;
+            string user = UserTxt.Text;
+            string pw = PassTxt.Text;
+
+            if (user == null || pw == null)
+                success = false;
+            if (user == "" || pw == "")
+                success = false;
+            else
+                success = CreateAccount(user, pw);
+
+            if (!success)
             {
-                xl = new Excel(@"C:\Users\janle\source\repos\lms-stelarr\STELARR3\Resources\Files\users.xlsx", 1);
-                
-                int i = 1;
-                int j = 1;
-                while (i <= 5)
-                {
-                    if (xl.ReadCell(i, j) == "")
-                    {
-                        xl.WriteCell(i, j, (string)UserTxt.Text, (string)PassTxt.Text);
-                        LoginWarning.Visibility = Visibility.Visible;
-                        break;
-                    }
-                    else
-                        i++;
-                    
-                }
-
-                xl.SaveWorkbook();
+                LoginWarning.Text = "Create Account Failed";
+                LoginWarning.Background = new SolidColorBrush(Colors.Red);
+                LoginWarning.Foreground = new SolidColorBrush(Colors.Black);
+                LoginWarning.Visibility = Visibility.Visible;
             }
+            else
+            {
+                LoginWarning.Text = "Account Created";
+                LoginWarning.Background = new SolidColorBrush(Colors.Green);
+                LoginWarning.Foreground = new SolidColorBrush(Colors.White);
+                LoginWarning.Visibility = Visibility.Visible;
+            }
+                
 
             CreateAccountBtn.Visibility=Visibility.Hidden;
             LoginBtn.Visibility = Visibility.Visible;
@@ -134,5 +152,26 @@ namespace STELARR3.UserControls
             PassTxt.Text = "";
 
         }
+
+        public bool CreateAccount(string user, string pw)
+        {
+            
+            Excel wxl = new Excel(@"C:\Users\janle\source\repos\lms-stelarr\STELARR3\Resources\Files\users.xlsx", 1);
+
+            int i = 3;
+            int j = 1;
+            
+
+            wxl.WriteCell(i, j, user);
+            wxl.WriteCell(i, j+1, pw);
+            wxl.SaveWorkbook();
+            wxl.CloseWorkbook();
+
+            return true;
+        }
+
+
+
+
     }
 }

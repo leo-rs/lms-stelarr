@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\janle\source\repos\lms-stelarr\STELARR3\App.xaml
-41863811318
+4860407489
 
-11-1382669393
+13-1172014005
 1951438367233
-MainWindow.xaml;UserControls\DashControl.xaml;UserControls\LessonControl.xaml;UserControls\LoginControl.xaml;
+MainWindow.xaml;UserControls\DashControl.xaml;UserControls\LibraryControl.xaml;UserControls\LoginControl.xaml;
 
 False
 
