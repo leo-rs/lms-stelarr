@@ -33,6 +33,7 @@
                 <Button x:Name="NextPage" Grid.Column="1" Content="Next" Height="20" Width="50" Margin="5" Click="NextPage_Click"/>
             </StackPanel>
             <TextBlock x:Name="Content" Grid.Column="2" Grid.ColumnSpan="2" Text="" Margin="10" Background="White" FontSize="20" MinHeight="200"/>
+            <Button x:Name="Print" Grid.Column="1" Content="Print" Height="20" Width="50" Margin="5" Click="Print_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
+using System.Threading;
+
 
 namespace STELARR3.UserControls
 {
@@ -87,5 +90,11 @@ namespace STELARR3.UserControls
             }
         }
 
-    }
+        private void Print_Click(object sender, RoutedEventArgs e)
+        {
+
+
+        }
+
+}
 }

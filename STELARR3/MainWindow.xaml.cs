@@ -32,7 +32,6 @@ namespace STELARR3
         {
             InitializeComponent();
             login = new LoginControl();
-            dash = new DashControl();
 
             screen.Content = login;
 
@@ -56,6 +55,7 @@ namespace STELARR3
 
         private void LoadHomeBtn_Click(object sender, RoutedEventArgs e)
         {
+            dash = new DashControl(login.Sesh().Learner);
             activeView.Content = dash;
         }
 

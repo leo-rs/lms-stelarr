@@ -14,19 +14,20 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
         <!-- Row 1 -->
         <StackPanel Grid.ColumnSpan="3" Margin="10">
-            <TextBlock Text="Welcome to STELARR," Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" FontWeight="Bold" Margin="10"/>
-            <Image Height="60" Width="60"></Image>
-            <TextBlock Text="{Binding Path=FullName}" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text="Hello!" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" FontWeight="Bold" Margin="5"/>
+            <Image Height="60" Width="60" Source="C:\Users\janle\source\repos\lms-stelarr\STELARR3\Resources\Images\avi.png">
+            </Image>
+            <TextBlock x:Name="User" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" FontWeight="Bold" Margin="5"/>
         </StackPanel>
 
         <!-- Row 2 -->
-        <TextBlock Grid.Row="1" Text="Progress" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Last Viewed Lesson" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Current Average" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="1" Text="Progress" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Last Viewed Lesson" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Current Average" HorizontalAlignment="Center" FontWeight="Bold"/>
     </Grid>
 </UserControl>

@@ -10,7 +10,7 @@
         Closing="Window_Closing">
     <Grid>
         
-        <Grid Margin="10" Background="Black" x:Name="dashboard">
+        <Grid Margin="10" Background="AntiqueWhite" x:Name="dashboard">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="9*"/>
@@ -41,8 +41,10 @@
             <Label Grid.Column="1" Content="{Binding Path=Clock}" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Foreground="White" MinWidth="200" MinHeight="30" FontSize="20" HorizontalContentAlignment="Right"/>
 
             <!-- Row 2 -->
-            <ContentControl Grid.Row="1" Grid.ColumnSpan="2" x:Name="activeView">
-                Choose from options above
+            <ContentControl Grid.Row="1" Grid.ColumnSpan="2" x:Name="activeView" >
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="60">
+                    Welcome to STELARR!
+                </TextBlock>
             </ContentControl>
         </Grid>
         <ContentControl x:Name="screen">

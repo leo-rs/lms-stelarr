@@ -1,4 +1,5 @@
-﻿using System;
+﻿using STELARR3.Classes.Users;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace STELARR3.UserControls
     /// </summary>
     public partial class DashControl : UserControl
     {
-        public DashControl()
+
+        Learner _learner;
+
+        public DashControl(Learner learner)
         {
             InitializeComponent();
+            _learner = learner;
+
+            User.Text = learner.FirstName + " " + learner.LastName;
         }
     }
 }
