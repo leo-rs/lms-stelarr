@@ -19,23 +19,45 @@ namespace STELARR2.ViewModels
         private string _clock;
         private DispatcherTimer timer = new DispatcherTimer();
 
-        private readonly DashboardViewModel dash;
-        private readonly LibraryViewModel lib;
+        private DashboardViewModel dash;
+        private LibraryViewModel lib;
+        private LoginViewModel login;
 
+        private bool _menuBarIsVisible = false;
+
+        private string user;
+        private string password;
+        private bool loginSuccess;
 
         public ShellViewModel()
         {
-            _session = new Session(new Learner("Leo", "Ras"));
 
-            timer.Tick += DashTimer;
-            timer.Interval = TimeSpan.FromSeconds(1);
-            timer.Start();
+            login = new LoginViewModel();
 
-            dash = new DashboardViewModel(_session.Learner);
-            lib = new LibraryViewModel(_session.Learner);
+            ActiveItem = login;
 
-            ActiveItem = dash;
+            ActivateMenu();
+            
         }
+
+        public void ActivateMenu()
+        {
+            if (user != null)
+            {
+                timer.Tick += DashTimer;
+                timer.Interval = TimeSpan.FromSeconds(1);
+                timer.Start();
+
+                _session = new Session(new Learner(user, password));
+
+                dash = new DashboardViewModel(_session.Learner);
+                lib = new LibraryViewModel(_session.Learner);
+
+                ActiveItem = dash;
+                MenuBarIsVisible = true;
+            }
+        }
+
 
         public Session Session
         {
@@ -63,5 +85,16 @@ namespace STELARR2.ViewModels
         {
             ActivateItemAsync(dash);
         }
+
+        public bool MenuBarIsVisible
+        {
+            get { return _menuBarIsVisible; }
+            set
+            {
+                _menuBarIsVisible = value;
+                NotifyOfPropertyChange(() => MenuBarIsVisible);
+            }
+        }
+
     }
 }

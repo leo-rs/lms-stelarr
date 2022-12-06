@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\janle\source\repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\
+C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\obj\Debug\net6.0-windows\
 STELARR2
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\janle\source\repos\lms-stelarr\STELARR2\App.xaml
-8-1980935882
+C:\Users\janle\Source\Repos\lms-stelarr\STELARR2\App.xaml
+10315380758
 
-29344738208
+32-732458709
 219-1723242373
-Views\AssessmentView.xaml;Views\DashboardView.xaml;Views\GradebookView.xaml;Views\LessonView.xaml;Views\LibraryListView.xaml;Views\LibraryView.xaml;Views\SettingsView.xaml;Views\ShellView.xaml;
+Views\AssessmentView.xaml;Views\DashboardView.xaml;Views\GradebookView.xaml;Views\LessonView.xaml;Views\LibraryListView.xaml;Views\LibraryView.xaml;Views\LoginView.xaml;Views\SettingsView.xaml;Views\ShellView.xaml;Windows\Login.xaml;
 
 False
 
